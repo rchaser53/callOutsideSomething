@@ -17,12 +17,14 @@ endfunction
 "\   {'out_cb': function('s:handler')})
 function Nyan()
   let s:job = job_start(
-  \   ['npm', 'run', 'lint:nyan'],
-  \   {'out_cb': function('g:KKK')})
+  \   ['open', '/Applications/Visual Studio Code.app/' ],
+  \   {'callback': function('g:KKK')})
 endfunction
 
+  "\   {'out_cb': function('g:KKK')})
+  "   ['npm', 'run', 'lint:nyan'],
 function g:KKK(ch, msg)
-  echo 23
+  echo a:msg
 endfunction
 
 "function TimerTest()
